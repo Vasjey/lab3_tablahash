@@ -12,7 +12,7 @@ char * _strdup(const char * str) {
     return aux;
 }
 
-char msg[300];
+char msg[500];
 int test_id = -1;
 
 
@@ -433,7 +433,7 @@ int enlarge_test(){
 
     enlarge(map);
 
-    if(map->buckets[0]->value!=value3 || map->buckets[2]!=NULL || map->buckets[12]->value != value5 || map->buckets[4]->value!=value4){
+    if((!map->buckets[0] || map->buckets[0]->value!=value3) || map->buckets[2]!=NULL || (!map->buckets[12] || map->buckets[12]->value != value5) || (!map->buckets[4] || map->buckets[4]->value!=value4)){
         // 1. Guardamos cuántos caracteres escribimos inicialmente
         int offset = sprintf(msg, "enlarged table is:\n");
 
