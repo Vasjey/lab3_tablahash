@@ -17,3 +17,9 @@ hashmap.c:48:26: error: expected expression before ‘)’ token
    48 |     HashMap *map=(HasMap*)malloc(sizeof(HashMap));
       |                          ^
 c402724
+Thu Apr 16 06:29:59 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|6
+total_score: 5/60
+0e012f0
