@@ -71,7 +71,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     long indice=hash(key,map->capacity);
     while((map->buckets[indice] != NULL) && (map->buckets[indice]->key != NULL)){
         if(is_equal(map->buckets[indice]->key,key)) return;
-        //🐱‍👤
+        //🐱‍👤 (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
         indice=(indice+1)%map->capacity;
     }
     Pair *nuevo=createPair(key,value);
