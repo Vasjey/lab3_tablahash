@@ -66,3 +66,9 @@ hashmap.c:94:73: error: array subscript is not an integer
    94 |         if((map->buckets[indice]->key != NULL) && (is_equal(map->buckets[index]->key, key))){
       |                                                                         ^
 8b9980b
+Sun Apr 19 07:14:23 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  8|3
+total_score: 30/60
+8aa8c0b
