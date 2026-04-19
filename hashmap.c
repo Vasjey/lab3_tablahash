@@ -45,7 +45,7 @@ int is_equal(void* key1, void* key2){
 // Inicialice el índice current a -1.
 
 HashMap * createMap(long capacity) {
-   /* HashMap *map=(HashMap*)malloc(sizeof(HashMap));
+    HashMap *map=(HashMap*)malloc(sizeof(HashMap));
     if(map==NULL)return NULL;
     map->buckets=(Pair **)calloc(capacity,sizeof(Pair *));
     if(map->buckets==NULL){
@@ -55,8 +55,7 @@ HashMap * createMap(long capacity) {
     map->size=0;
     map->capacity=capacity;
     map->current=-1;
-    return map;*/
-    return NULL;
+    return map;
 }
 
 // 2. Implemente la función void insertMap(HashMap * map, char * key, void * value). 
@@ -90,8 +89,18 @@ void insertMap(HashMap * map, char * key, void * value) {
 // Recuerde actualizar el índice current a la posición encontrada. Recuerde que el arreglo es circular.
 
 Pair * searchMap(HashMap * map,  char * key) {   
-
-
+    long indice=hash(key,map->capacity);
+    while(map->buckets[indice] != NULL){
+        if((map->buckets[indice]->key != NULL) && (is_equal(map->buckets[index]->key, key))){
+            map->current=indice;
+            return map->buckets[indice];
+            }
+        indice=(indice+1)%map->capacity;
+    }
+/*      |\      _,,,---,,_      
+ZZZzz /,`.-'`'    -.  ;-;;,_          
+     |,4-  ) )-,_. ,\ (  `'-'
+    '---''(_/--'  `-'\_) */
     return NULL;
 }
 

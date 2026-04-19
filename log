@@ -56,3 +56,13 @@ Thu Apr 16 08:29:20 PM UTC 2026:
  tests:  4|5
 total_score: 15/60
 2c0a0d1
+Sun Apr 19 06:56:57 PM UTC 2026: 
+ hashmap.c | 19 ++++++++++++++-----
+ 1 file changed, 14 insertions(+), 5 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:94:73: error: array subscript is not an integer
+   94 |         if((map->buckets[indice]->key != NULL) && (is_equal(map->buckets[index]->key, key))){
+      |                                                                         ^
+8b9980b
