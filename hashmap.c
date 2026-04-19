@@ -137,7 +137,11 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-
+    for(long indice=map->current+1;indice<map->capacity;indice++){
+        if((map->buckets[indice] != NULL) && (map->buckets[indice]->key) != NULL){
+            map->current=indice;
+            return map->buckets[indice];
+            }
     return NULL;
 }
 
