@@ -142,6 +142,7 @@ Pair * nextMap(HashMap * map) {
             map->current=indice;
             return map->buckets[indice];
             }
+    }
     return NULL;
 }
 
